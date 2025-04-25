@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     /* Imagen de fondo */
-    background-image: url('Img/FondoHeader.jpg'); /* Reemplaza con la ruta correcta si es necesario */
+    background-image: url('Img/FondoHeader.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
