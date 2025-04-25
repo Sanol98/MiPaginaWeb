@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     /* Imagen de fondo */
-    background-image: url('../Img/FondoHeader.jpg'); 
+    background-image: url('../Img/FondoHeader.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -66,10 +66,12 @@ header h2 {
     border-radius: 0 0 10px 10px;
     text-align: center;
     width: 100%;
-    margin-left: 150px;
+    /* Elimina el margen izquierdo fijo para centrar */
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Align items to the start (left) */
+    justify-content: center; /* Centra los elementos hijos */
     /* If needed, add negative margin */
     /* margin-left: -10px; */
 }
@@ -80,7 +82,8 @@ header h2 {
     margin: 0;
     display: flex;
     justify-content: space-around; /* Distribuye los elementos uniformemente */
-    width: 100%;
+    width: 100%; /* O un ancho fijo si prefieres */
+    max-width: 600px; /* Ejemplo de ancho máximo para el menú */
 }
 
 #menu li {
@@ -225,7 +228,7 @@ a:hover {
         width: 100%;
         background: rgba(80, 80, 80, 0.95);
         border-radius: 0 0 10px 10px;
-        display: none;
+        display: none; /* Se oculta en pantallas pequeñas */
         flex-direction: column;
     }
 
@@ -249,7 +252,7 @@ a:hover {
     }
 
     header.menu-open #menu {
-        display: block;
+        display: block; /* Se muestra cuando la clase 'menu-open' está en el header */
     }
 
     header::after {
@@ -260,30 +263,6 @@ a:hover {
         font-size: 2em;
         color: white;
         cursor: pointer;
-    }
-
-    section {
-        padding: 10px;
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 95%;
-    }
-
-    section h2 {
-        font-size: 1.4em;
-    }
-
-    ul {
-        width: 95%;
-    }
-
-    article p {
-        width: 95%;
-    }
-
-    footer {
-        width: 95%;
     }
 }
 
