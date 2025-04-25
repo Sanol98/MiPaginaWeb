@@ -6,7 +6,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    background-image: url('Img/FondoPagina.png');
+    background-image: url('../Img/FondoPagina.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -28,7 +28,7 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     /* Imagen de fondo */
-    background-image: url('Img/FondoHeader.jpg'); 
+    background-image: url('../Img/FondoHeader.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -179,7 +179,7 @@ footer {
     margin-right: auto;
     width: 60%;
     font-size: 0.9em;
-    background-image: url('Img/FondoHeader.jpg');
+    background-image: url('../Img/FondoHeader.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
