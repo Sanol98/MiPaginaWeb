@@ -61,6 +61,10 @@ header h2 {
     color: white;
 }
 
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+}
+
 /* Estilos del menú */
 #menu {
     border-radius: 0 0 10px 10px;
@@ -211,6 +215,7 @@ a:hover {
         padding-top: 0.3em;
         padding-bottom: 0.3em;
         text-align: center;
+        position: relative; /* Asegura que el .menu-toggle se posicione correctamente */
     }
 
     header h1 {
@@ -221,6 +226,17 @@ a:hover {
         font-size: 0.9em;
     }
 
+    .menu-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+        display: block; /* Se muestra en pantallas pequeñas */
+        z-index: 10; /* Asegura que esté por encima del menú */
+    }
+
     #menu {
         position: absolute;
         top: 100%;
@@ -228,8 +244,9 @@ a:hover {
         width: 100%;
         background: rgba(80, 80, 80, 0.95);
         border-radius: 0 0 10px 10px;
-        display: none; /* Se oculta en pantallas pequeñas */
+        display: none; /* Se oculta por defecto */
         flex-direction: column;
+        z-index: 9; /* Asegura que esté debajo del botón pero encima del contenido */
     }
 
     #menu ul {
@@ -253,16 +270,6 @@ a:hover {
 
     header.menu-open #menu {
         display: block; /* Se muestra cuando la clase 'menu-open' está en el header */
-    }
-
-    header::after {
-        content: '\u2630';
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 2em;
-        color: white;
-        cursor: pointer;
     }
 }
 
@@ -384,4 +391,33 @@ section button {
 
 section button:hover {
     background-color: #777;
+}
+
+/* Estilos para pantallas más grandes (donde el menú es horizontal) */
+@media only screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Oculta el botón en pantallas grandes */
+    }
+
+    #menu {
+        display: flex; /* Muestra el menú horizontal */
+        position: static;
+        background: transparent;
+        border-radius: 0;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #menu ul {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #menu li {
+        border: 1px solid white;
+        margin: 5px;
+    }
 }
